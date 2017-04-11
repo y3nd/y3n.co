@@ -43,7 +43,7 @@ blockquote, q {
 body {
 	font-family: 'Mada', sans-serif;
 	background-color: #1f1f1f;
-	background-image: url(bg-min.jpg);
+	background-image: url(bg-min.jpg?v=2);
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
