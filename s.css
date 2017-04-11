@@ -1,0 +1,200 @@
+/* FIREFOX CSS RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, hr,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	overflow: hidden;
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+body {
+	font-family: 'Mada', sans-serif;
+	background-color: #1f1f1f;
+	background-image: url(bg-min.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+p, a {
+	color: #d4d4d4;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25)
+}
+
+#main {
+	width: 100vw;
+	perspective: 150px;
+	height: 100vh;
+	background-color: rgba(240, 240, 240, 0.1);
+}
+
+#home {
+	width: 300px;
+	height: 100%;
+
+	/*background-color: rgba(240, 240, 240, 0.3);*/
+	margin: 0 auto;
+
+	animation: 1s fadeIn 2s;
+  animation-fill-mode: forwards;
+
+  opacity: 0;
+
+	z-index: 50;
+}
+
+#header {
+	padding-top: 20vh;
+	width: 100%;
+}
+
+#home_title {
+	font-size: 5em;
+	text-align: center;
+	font-weight: 900;
+}
+
+#home_legend {
+	line-height: 3.0;
+	font-style: italic;
+	text-align: center;
+	font-weight: lighter;
+}
+
+#home_menu {
+	width: 100%;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+#home_menu li {
+	float: left;
+	width: 50%;
+	text-align: center;
+	font-size: 1.3em;
+	padding: 8px 0 8px 0;
+	transform: scale(0.98);
+	background-color: rgba(0,0,0,0.1);
+	transition: 0.5s all;
+}
+
+#home_menu li:hover {
+	transform: scale(0.9);
+	background-color: rgba(40, 40, 40, 0.25)
+}
+
+#home_menu li:active {
+	background-color: rgba(40, 40, 40, 0.5)
+}
+
+#home_menu li a {
+	transition: 0.5s all;
+}
+
+#home_menu li a:hover {
+	/*color: #7ec4ff;*/
+}
+
+#home_citation {
+	font-size: 10.5pt;
+	font-style: italic;
+	font-weight: lighter;
+	text-align: center;
+}
+
+#email {
+	text-align: center;
+}
+
+#uselessbar {
+	z-index: -10;
+	position: absolute;
+	top: -500px;
+	left: calc(37vw);
+	background-color: rgba(220, 220, 220, 0.1);
+	transform: rotate(30deg);
+	width: 340px;
+	height: 200%;
+	animation: 1s fadeIn3 0.2s;
+  animation-fill-mode: forwards;
+
+	opacity: 0;
+}
+
+#uselessbar2 {
+	z-index: -10;
+	position: absolute;
+	top: -500px;
+	right: calc(37vw);
+	background-color: rgba(220, 220, 220, 0.1);
+	transform: rotate(-30deg);
+	width: 340px;
+	height: 200%;
+	animation: 1s fadeIn2 1s;
+  animation-fill-mode: forwards;
+
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: rotateX(20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes fadeIn2 {
+  0% {
+    transform: rotateX(20deg), rotate(-30deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg), rotate(-30deg);
+  }
+}
+
+@keyframes fadeIn3 {
+  0% {
+    transform: rotateX(20deg), rotate(30deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg), rotate(30deg);
+  }
+}
