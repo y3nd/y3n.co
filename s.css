@@ -40,6 +40,11 @@ blockquote, q {
 	quotes: none;
 }
 
+html {
+	width: 100%;
+	height: 100%;
+}
+
 body {
 	font-family: 'Mada', sans-serif;
 	background-color: #1f1f1f;
@@ -47,6 +52,8 @@ body {
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
 }
 
 p, a {
@@ -55,9 +62,9 @@ p, a {
 }
 
 #main {
-	width: 100vw;
+	width: 100%;
 	perspective: 150px;
-	height: 100vh;
+	height: 100%;
 	background-color: rgba(240, 240, 240, 0.1);
 }
 
@@ -88,8 +95,8 @@ p, a {
 }
 
 #home_legend {
-	line-height: 3.0;
-	font-style: italic;
+	line-height: 2.7;
+	/*font-style: italic;*/
 	text-align: center;
 	font-weight: lighter;
 }
@@ -140,7 +147,7 @@ p, a {
 	z-index: -10;
 	position: absolute;
 	top: -500px;
-	left: calc(37vw);
+	left: 37%;
 	background-color: rgba(220, 220, 220, 0.1);
 	transform: rotate(30deg);
 	width: 340px;
@@ -155,7 +162,7 @@ p, a {
 	z-index: -10;
 	position: absolute;
 	top: -500px;
-	right: calc(37vw);
+	right: 37%;
 	background-color: rgba(220, 220, 220, 0.1);
 	transform: rotate(-30deg);
 	width: 340px;
@@ -164,6 +171,16 @@ p, a {
   animation-fill-mode: forwards;
 
   opacity: 0;
+}
+
+@media screen and (max-width: 640px) {
+	#uselessbar2 {
+		right: 10%;
+	}
+
+	#uselessbar {
+		left: 10%;
+	}
 }
 
 @keyframes fadeIn {
